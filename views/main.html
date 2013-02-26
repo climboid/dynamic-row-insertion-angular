@@ -1,0 +1,19 @@
+<div class="span6 overflownTable">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in data | orderBy:predicate.column:predicate.rev" ng-class="item.class">
+        <td ng-bind="item.priceDif"></td>
+        <td ng-bind="item.cannibalization"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="span4">
+  <button ng-click="addRow()" class="btn">Add row</button>
+</div>
